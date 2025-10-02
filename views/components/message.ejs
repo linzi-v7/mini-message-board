@@ -1,0 +1,15 @@
+<div class="bg-white p-5 rounded-lg shadow-md">
+    <div class="flex items-center justify-between mb-2">
+        <p class="text-lg font-semibold text-blue-700">
+            <%= msg.user %>
+        </p>
+        <p class="text-xs text-gray-500">
+            <%= msg.added.toLocaleString("en-US", { timeStyle: "medium" }) %>
+        </p>
+    </div>
+    <p class="text-gray-700">
+        <%= msg.text %>
+    </p>
+    <a href="/message/<%= msg.id %>" class="text-blue-600 hover:underline text-sm mt-2 inline-block">View Details
+        &rarr;</a>
+</div>

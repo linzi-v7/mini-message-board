@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Message Details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-xl w-full">
+        <h1 class="text-2xl font-bold text-center mb-6 text-blue-700">
+            Message ID <%= message.id %>
+        </h1>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="flex items-center justify-between mb-4">
+                <p class="text-lg font-semibold text-blue-700">
+                    <%= message.user %>
+                </p>
+                <p class="text-xs text-gray-500">
+                    <%= message.added.toLocaleString("en-US", { timeStyle: "medium" , dateStyle: "medium" }) %>
+                </p>
+            </div>
+            <p class="text-gray-700 mb-6">
+                <%= message.text %>
+            </p>
+            <a href="/" class="text-blue-600 hover:underline text-sm">&larr; Back to messages</a>
+        </div>
+    </div>
+</body>
+
+</html>
